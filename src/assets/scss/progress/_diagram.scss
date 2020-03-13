@@ -1,0 +1,125 @@
+.standard-diagram-svg.diagram-svg {
+    .hidden {
+        display: none;
+    }
+    .arrow-path {
+        fill: transparent;
+        stroke: $themeColor;
+    }
+    .dragline {
+        stroke: $themeColor;
+    }
+    .node-container {
+        .node {
+            text {
+                font-size: 14px;
+                &.category_start, &.category_end {
+                    font-size: 11px;
+                }
+            }
+            &.checked-node {
+                .shape {
+                    stroke: $themeColor;
+                    fill: #fff;
+                }
+                [class^="category_"] {
+                    stroke: $themeColor;
+                    fill: #fff;
+                }
+                .option-remove-container {
+                    display: block;
+                }
+                .link_reference_container {
+                    display: block;
+                }
+                &.node_no_rm {
+                    .option-remove-container {
+                        display: none;
+                    }    
+                }
+            }
+            
+            .option-remove-container {
+                display: none;
+                circle {
+                    fill: $danger;
+                    stroke: $danger;
+                }
+                path {
+                    fill: #fff;
+                }
+            }
+
+            &.reference_feedback {
+                path {
+                    fill: transparent !important;
+                    stroke: #fff !important;
+                }
+                .category_join {
+                    fill: transparent !important;
+                    stroke: #fff !important;
+                }
+            }
+        }
+        
+        .link_reference_container {
+            display: none;
+            .link_reference_graph {
+                fill: #fff;
+                stroke: $borderColor;
+                &.reference_hover {
+                    stroke: $themeColor;
+                }
+            }
+        }
+        .node_shape_circle {
+            circle {
+                fill: transparent;
+                stroke: $borderColor;
+                &.category_join {
+                    stroke-width: 2;
+                }
+            }
+            // 分支内菱形
+            .category_branch {
+                transform: rotate(90deg);
+                fill: transparent;
+                stroke: $borderColor;
+                stroke-width: 2;
+            }
+        }
+        // 流程节点
+        .node_shape_rect {
+            rect {
+                fill: transparent;
+                stroke: $borderColor;
+            }
+        }
+    }
+    .link-container {
+        .link-g {
+            &.checked-link {
+                .link-actived-bg {
+                    opacity: 0.3;
+                }
+                .option-remove {
+                    display: block;
+                }
+            }
+        }
+        .link-actived-bg {
+            fill: none;
+            stroke: $retry;
+            stroke-width: 15;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            opacity: 0;
+            cursor: move;
+        }
+    }
+    .link-label-container {
+        .edgelabel {
+            font-size: 18px;
+        }
+    }
+}

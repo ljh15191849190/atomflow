@@ -1,0 +1,45 @@
+@mixin bg-color($bg:success){
+    @if ($bg == success) {
+        background-color: $in-success;
+    }
+    @else if($bg == stop) {
+        background-color: $in-stop;
+    }
+     @else if($bg == out-success) {
+        background-color: $out-success;
+    }
+    @else if($bg == out-stop) {
+        background-color: $out-stop;
+    }
+}
+
+.d_flex {
+    display: flex;
+}
+.out-status {
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .in-status {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    .up {
+        @include bg-color(success);
+    }
+    .down {
+        @include bg-color(stop);
+    }
+}
+.up-out {
+    @include bg-color(out-success);
+}
+.down-out {
+    @include bg-color(out-stop);
+}

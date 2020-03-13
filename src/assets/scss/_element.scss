@@ -1,0 +1,81 @@
+/**
+* elelemnt 样式覆盖优化
+* @author xinghua.wen
+*/
+
+/* 改变主题色变量 */
+$--color-primary: $themeColor;
+$--color-text-placeholder: #c2c2c2;
+$--color-text-regular: #646464;
+$--color-danger: #f86255;
+$--color-primary-light-7: #0473d3;
+$--table-header-background: #f7f7f7;
+$--table-current-row-background: #f5f5f5;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+.el-radio-group {
+    vertical-align: baseline;
+}
+.checked-node {
+    color: #FF7940;
+}
+.no-border {
+    input.el-input__inner {
+        border: 0;
+    }
+}
+//table 滚动条问题
+.el-table {
+    width: 100%;
+    height: 100%;
+    // UCMP3-1416 表格布局优化：行间距减小
+    th {
+        padding: 5px 0;
+    }
+    td {
+        padding: 2px 0;
+    }
+}
+.el-table__body-wrapper {
+    height: calc(100% - 40px);
+    //安装最新的element-ui 2.3.2后滚动条设置
+    overflow-y: auto;
+}
+//dialog
+.el-dialog__header {
+    border-bottom: 1px solid #e1e5e6;
+}
+.el-dialog__footer {
+    border-top: 1px solid #e1e5e6;
+}
+.el-table--small {
+    font-size: 13px;
+}
+
+.zoom-in-right-leave-active,
+.zoom-in-right-enter-active {
+  transition: 0.25s;
+}
+.zoom-in-right-enter {
+  transform: translate(100%, 0);
+}
+.zoom-in-right-leave-to {
+  transform: translate(100%, 0);
+}
+// tabs加 |
+.el-tabs:not(.el-tabs--border-card):not(.el-tabs--card) {
+    .el-tabs__nav {
+        margin-left: 15px;
+        .el-tabs__item:not(:nth-last-child(1)) {
+            &::after {
+                content: ' ';
+                position: relative;
+                left: 20px;
+                border-right: 1px solid #ddd;
+            }
+        }
+    }
+}

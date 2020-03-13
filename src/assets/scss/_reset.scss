@@ -1,0 +1,63 @@
+/**
+* @description UI默认行为/复写Bootstrap、elementUI
+*/
+html, body {
+    height: 100%;
+    font-size: 14px;
+}
+button:focus {
+    outline: none;
+}
+// 复写bootstrap label
+label {
+    margin-bottom: 0;
+}
+.tree-btns {
+    margin-left: 5px;
+    color: $themeColor;    
+    &:hover {
+        color: $themeColor;
+    }
+}
+.theme-color {
+    color: $themeColor;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+    border-top-color: $borderColor;
+}
+.tooltip-inner {
+    background: $borderColor
+}
+
+.el-button [class*=atom-icon-]+span {
+    margin-left: 5px;
+}
+.right-border {
+    border-right: 1px solid $borderColor;
+}
+
+.left-border {
+    border-left: 1px solid $borderColor;
+}
+
+.left-border {
+    border-left: 1px solid $borderColor;
+}
+
+.right-border {
+    border-right: 1px solid $borderColor;
+}
+
+.custom-drag-ghost {
+    list-style: none;
+}
+.display-inline {
+    display: inline !important;
+}
+.display-block {
+    display: block !important;
+}
+.display-inline-block {
+    display: inline-block !important;
+}

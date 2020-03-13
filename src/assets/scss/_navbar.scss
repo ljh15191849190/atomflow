@@ -1,0 +1,148 @@
+.el-menu.atom-navbar.menu-list{
+    border: none;
+    width: $menuLargeWidth;
+    height: calc(100% - #{$menuHeight - 1px});
+    padding: 0px 0px $menuHeight;
+    overflow-y: auto;
+    &.el-menu--collapse{
+        width: $menuSmallWidth;
+        .el-submenu > .el-submenu__title, .dashboard-menu > .el-tooltip{
+            padding: 0;
+            padding-left: 16px !important;
+        }
+    }
+    .el-menu-item, .el-submenu__title{
+        background: $menuItemBgColor !important;
+        line-height: $menuHeight;
+        height: $menuHeight;
+        color: $fontWhite !important;
+        // atom-navbar-text, i{
+        //     color: $fontWhite !important;
+        // }
+    }
+    li{
+        background: $menuItemBgColor;
+        border-left: none !important;
+        border-bottom: 1px solid $menuBgColor;
+        .el-submenu__title{
+            border-left: none !important;
+        }
+    }
+    .el-menu-item:hover, .el-menu-item:active,
+    .el-submenu__title:hover, .el-submenu__title:active{
+        .atom-navbar-text, i{
+            color: $menuHoverColor;
+        }
+    }
+
+}
+
+
+// 二级菜单
+.el-menu.atom-navbar.menu-list .el-menu--inline ,
+.el-menu--popup-right-start{
+    .el-menu-item{
+        line-height: $menuHeight;
+        height: $menuHeight;
+        background: $menuBgColor !important;
+        box-sizing: border-box;
+        padding-left: 50px !important;
+        .atom-navbar-text{
+            color: $fontWhite !important;
+            position: relative;
+            &:before {
+                content: '';
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: $navBarcolor;
+                position: absolute;
+                top: 6px;
+                left: -15px;
+            }
+        }
+        &:hover{
+            background: $menuItemBgColor !important;
+        }
+        &:hover .atom-navbar-text{
+            color: $themeColor !important;
+        }
+        &.is-active{
+            background: $themeColor !important;
+            .atom-navbar-text{
+                color: $fontWhite !important;
+                font-weight: 600;
+                position: relative;
+                &:before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: $fontWhite;
+                    position: absolute;
+                    top: 4px;
+                    left: -15px;
+                }
+            }
+        }
+    }
+}
+// 右侧悬浮菜单
+.el-menu--popup-right-start .el-menu-item{
+    height: $menuHeight;
+    line-height: $menuHeight;
+    padding-left: 40px !important;
+}
+.atom-navbar-icon {
+    vertical-align: middle;
+    display: inline-block;
+    width: 24px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+// 展开按钮样式
+.collapse-switch{
+    width: $menuLargeWidth;
+    height: $menuHeight;
+    background: $menuItemBgColor;
+    color: $navBarcolor;
+    .collapse-btn{
+        cursor: pointer;
+        position: absolute;
+        right: 25px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+    }
+    &.btn-mini-width{
+        width: $menuSmallWidth;
+    }
+}
+// 右边箭头
+.el-submenu.is-active, .el-menu-item.dashboard-menu.is-active{
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 12px;
+        display: inline-block;
+        border-width: 8px 10px;
+        border-style: solid;
+        border-color: transparent;
+        border-right-color: #eef1f5;
+    }
+}
+.el-menu.atom-navbar > .el-submenu.is-active > .el-submenu__title,
+.el-menu.atom-navbar.menu-list .el-menu-item.dashboard-menu.is-active{
+    // background-color: $navbarSelectedBgColor !important;
+    .atom-navbar-text, i{
+        color: $menuHoverColor;
+    }
+}
+// 收起导航时右侧区域的宽度
+.more-width {
+    margin-left: $menuSmallWidth;
+    width: calc(100% - #{$menuSmallWidth});
+}

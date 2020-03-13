@@ -1,0 +1,333 @@
+
+%iconfont {
+	font-family: 'iconfont-atom';		
+	font-style: normal;	
+	&.theme-color {
+		&:before {
+			color: $themeColor;
+			margin-right: 5px;
+        }
+        &.disabled {
+            color: #bbb;
+            background: #f9f9f9;
+            cursor: not-allowed;
+        }
+        &:hover {
+            color: #bbb;
+        }
+	}	
+}
+// 菜单图标
+.atom-icon-menu-sheet {
+    &:before {
+		@extend %iconfont;	
+		content: '\e62b';
+	}
+}
+.atom-icon-menu-work{
+    &:before {
+		@extend %iconfont;	
+		content: '\e754';
+	}
+}
+.atom-icon-menu-template{
+    &:before {
+		@extend %iconfont;	
+		content: '\e754';
+	}
+}
+.atom-icon-menu-cycle{
+    &:before {
+		@extend %iconfont;	
+		content: '\e754';
+	}
+}
+.atom-icon-menu-audit{
+    &:before {
+		@extend %iconfont;	
+		content: '\e754';
+	}
+}
+.atom-icon-menu-link{
+    &:before {
+		@extend %iconfont;	
+		content: '\e754';
+	}
+}
+.atom-icon-menu-agent{
+    &:before {
+		@extend %iconfont;	
+		content: '\e754';
+	}
+}
+// ----------------脚本管理------------------
+.atom-icon-add {
+	&:before {
+		@extend %iconfont;	
+		content: '';
+	}
+}
+
+.atom-icon-clone {
+	&:before {
+		@extend %iconfont;	
+		content: '\e631';
+	}
+}
+
+.atom-icon-edit {
+	&:before {
+		@extend %iconfont;	
+		content: '\e62f';
+	}
+}
+
+.atom-icon-delete {
+	&:before {
+		@extend %iconfont;	
+		content: '\e62a';
+	}
+}
+
+.atom-icon-folder {
+	&:before {
+		@extend %iconfont;	
+		content: '\e6a9';
+	}
+}
+
+.atom-icon-flow-manager {
+	&:before {
+		@extend %iconfont;	
+		content: '\e754';
+	}
+}
+
+.atom-icon-sheet-add {
+	&:before {
+		@extend %iconfont;	
+		content: '\e629';
+	}
+}
+
+.atom-icon-sheet-list {
+	&:before {
+		@extend %iconfont;	
+		content: '\e603';
+	}
+}
+
+.atom-icon-sheet-manager {
+	&:before {
+		@extend %iconfont;	
+		content: '\e62b';
+	}
+}
+
+.atom-icon-sheet-download {
+	&:before {
+		@extend %iconfont;	
+		content: '\e615';
+	}
+}
+
+.atom-icon-sheet-help {
+	&:before {
+		@extend %iconfont;	
+		content: '\e6ad';
+	}
+}
+
+.atom-icon-sheet-user {
+	&:before {
+		@extend %iconfont;	
+		content: '\e613';
+	}
+}
+
+.atom-icon-sheet-share {
+	&:before {
+		@extend %iconfont;	
+		content: '\e618';
+	}
+}
+
+.atom-icon-sheet-private {
+	&:before {
+		@extend %iconfont;	
+		content: '\e617';
+	}
+}
+
+.atom-icon-sheet-forbidden {
+	&:before {
+		@extend %iconfont;	
+		content: '\e616';
+	}
+}
+
+.atom-icon-flow-once {
+	&:before {
+		@extend %iconfont;	
+		content: '\e603';
+	}
+}
+
+.atom-icon-flow-duration {
+	&:before {
+		@extend %iconfont;	
+		content: '\e6da';
+	}
+}
+
+.atom-icon-flow-add {
+	&:before {
+		@extend %iconfont;	
+		content: '\e628';
+	}
+}
+
+.atom-icon-run {
+	&:before {
+		@extend %iconfont;	
+		content: '\e600';
+	}
+}
+
+.atom-icon-start {
+	&:before {
+		@extend %iconfont;	
+		content: '\e69b';
+	}
+}
+
+.atom-icon-pause {
+	&:before {
+		@extend %iconfont;	
+		content: '\e83b';
+	}
+}
+
+.atom-icon-load {
+	&:before {
+		@extend %iconfont;	
+		content: '\e609';
+	}
+}
+
+.atom-icon-link {
+	&:before {
+		@extend %iconfont;	
+		content: '\e60b';
+	}
+}
+
+.atom-icon-clear {
+	&:before {
+		@extend %iconfont;	
+		content: '\e64d';
+	}
+}
+
+.icon-atom-add {
+	&:before {
+		@extend %iconfont;	
+		content: '\e623';
+	}
+}
+
+.icon-atom-drag {
+	&:before {
+		@extend %iconfont;	
+		content: '\e630';
+	}
+}
+
+// 展开收缩按钮
+.atom-icon-menu-collapse-btn {
+	&:before {
+		@extend %iconfont;
+	    content: '\e680';
+	}
+}
+
+// 立即执行
+.atom-icon-run-start {
+	&:before {
+		@extend %iconfont;
+	    content: '\e6cf';
+	}
+}
+
+/********************** 脚本编排 start ***********************/
+// 保存
+.atom-icon-progress-save {
+	&:before {
+		@extend %iconfont;
+	    content: '\e6cc';
+	}
+}
+
+// 克隆
+.atom-icon-progress-clone {
+	&:before {
+		@extend %iconfont;
+	    content: '\e6c7';
+	}
+}
+
+// 居中
+.atom-icon-progress-center {
+	&:before {
+		@extend %iconfont;
+	    content: '\e6cd';
+	}
+}
+
+// 导入
+.atom-icon-progress-import {
+	&:before {
+		@extend %iconfont;
+	    content: '\e68f';
+	}
+}
+
+// 导出
+.atom-icon-progress-export {
+	&:before {
+		@extend %iconfont;
+	    content: '\e68e';
+	}
+}
+// 开关
+.atom-icon-work-open {
+	&:before {
+		@extend %iconfont;
+	    content: '\e620';
+	}
+}
+.atom-icon-work-close {
+	&:before {
+		@extend %iconfont;
+	    content: '\e61e';
+	}
+}
+.atom-icon-agent-up {
+	&:before {
+		@extend %iconfont;
+	    content: '\e624';
+	}
+}
+.atom-icon-sheet-down {
+	&:before {
+		@extend %iconfont;
+	    content: '\e625';
+	}
+}
+.atom-icon-agent-plan {
+	&:before {
+		@extend %iconfont;
+	    content: '\e614';
+	}
+}
+/********************** 脚本编排 end ************************/

@@ -1,0 +1,45 @@
+/**
+* @descripton sass工程存放变量的文件
+* @author xinghua.wen
+*/
+$globalBgColor:#eef1f5;
+$themeColor: #0081f6;
+$editor-min-height: 300px;
+$color: #646464;
+$borderColor: #a6a6a6;
+$fontColor: #333333;
+$fontWhite: #fff;
+
+/************ 图表变量 ***************/
+$fail: #f77d6b;
+$success: #61b2e4;
+$running: #87d86f;
+$skipped: #faec91;
+$queued: #43e3ed;
+$retry: #f8b96c;
+$no-status: #fff;
+$scheduled:#39e2b1;
+$upstream_failed: rgb(163, 108, 108);
+
+$legendWidth: 15px;
+$navbarBgColor: #6b7683;
+$navbarActiveBgColor: #323e49;
+$menuTopBgColor: #293039;
+$danger: #f86255;
+
+// navbar menu styles
+$navbarSelectedBgColor: #00b5f5;
+$menuLargeWidth: 190px;
+$menuSmallWidth: 60px;
+$menuHeight: 40px;
+$menuBgColor: #172632;
+$menuItemBgColor: #35414e;
+$navBarcolor: #525a5f;
+$navBarIconcolor:#60687d;
+$menuHoverColor: #fff;
+
+// agent
+$out-success: #d5fbca;
+$out-stop: #eeeeee;
+$in-success: #79c762;
+$in-stop: #ababab;

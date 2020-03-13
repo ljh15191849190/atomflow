@@ -1,0 +1,185 @@
+/**
+* @descriptoin 组件个性化样式
+* @author xinghua.wen
+*/
+#app {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $fontColor;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background:$globalBgColor;
+    position: relative;
+}
+.list-content {
+    margin-top: 25px;
+}
+.container-flud {
+    height: 100%;
+}
+.breadcrumb-container {
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 13px;
+}
+.atom-content {
+    height: calc(100% - 78px);  
+    padding: 16px;
+    background: #fff;
+    margin-left: 16px;
+    margin-right: 16px;    
+    border: 1px solid #e1e6e5;
+    border-radius: 5px;  
+    .work-content {
+        height: 100%;
+        .tab-content {
+            height: calc(100% - 85px);
+        }
+    }
+}
+.cell-pane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.pagefooter {
+    height: 54px;
+}
+// 只读模式 字体颜色
+.read-only {
+    font-size: 14px;
+    &.title {
+        color: $borderColor;
+    }
+    &.value {
+        margin-left: 10px;
+        color: $color;        
+    }
+}
+
+.column-name {
+    cursor: pointer;
+}
+/*********************************************/
+%tree-grapgh-legend {
+    border-radius: 5px;
+    margin-right: 5px;
+    width: $legendWidth;
+    height: $legendWidth;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+.success {
+    &:before {
+        content: '';
+        background: $success;
+        @extend %tree-grapgh-legend;
+    }
+}
+.fail {
+   &:before {
+        content: '';
+        background: $fail;
+        @extend %tree-grapgh-legend;
+    } 
+}
+.upstream_failed {
+    &:before {
+         content: '';
+         background: $upstream_failed;
+         @extend %tree-grapgh-legend;
+     } 
+ }
+.running {
+    &:before {
+        content: '';
+        background: $running;
+        @extend %tree-grapgh-legend;
+    } 
+}
+
+.skipped {
+    &:before {
+        content: '';
+        background: $skipped;
+        @extend %tree-grapgh-legend;
+    } 
+}
+.scheduled {
+    &:before {
+        content: '';
+        background: $scheduled;
+        @extend %tree-grapgh-legend;
+    } 
+}
+.up_for_retry{
+    &:before {
+        content: '';
+        background: $retry;
+        @extend %tree-grapgh-legend;
+    } 
+}
+.retry {
+    &:before {
+        content: '';
+        background: $retry;
+        @extend %tree-grapgh-legend;
+    } 
+}
+
+.queued {
+    &:before {
+        content: '';
+        background: $queued;
+        @extend %tree-grapgh-legend;
+    } 
+}
+
+.no-status {
+    &:before {
+        content: '';
+        background: $no-status;
+        @extend %tree-grapgh-legend;
+        border: 1px solid $borderColor;
+    } 
+}
+
+.is-danger {
+    &.input input{
+        color: $danger;        
+        border-color: $danger;
+    }
+    &.validator-error {
+        font-size: 12px;
+        line-height: 1;
+        padding-top: 4px;
+        top: 100%;
+        padding-top: 2px;   
+        position: relative;
+        display: block;
+        margin-top: 3px;
+        left: 0;
+        color: $danger; 
+        z-index: 99;
+
+    }
+}
+
+.breadcrumb-btn {
+    position: absolute;
+    top: 6px;
+    right: 16px;
+    color: $themeColor;
+    background: none;
+    border-color: none;
+    border: none;
+}
+.lineText{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
